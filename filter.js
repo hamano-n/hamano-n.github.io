@@ -7,12 +7,12 @@
 
   const items = Array.from(list.querySelectorAll(".timeline-item[data-category]"));
 
-  // <time datetime="YYYY-MM-DD"> の日付を使い、新しい順に並べ替える。
-  // HTML内でどこに追加しても、ページ読み込み時に順序を整える。
+  // <time datetime="YYYY-MM-DD"> の日付を使い、新しい順に並べ替える
+  // HTML内でどこに追加しても、ページ読み込み時に順序を整える様になっているはず
   items.sort((a, b) => {
-    const dateA = a.querySelector("time[datetime]")?.dateTime || "";
-    const dateB = b.querySelector("time[datetime]")?.dateTime || "";
-    return dateB.localeCompare(dateA);
+const dateA = a.querySelector(".timeline-date")?.textContent.trim() || "";
+const dateB = b.querySelector(".timeline-date")?.textContent.trim() || "";
+return dateB.localeCompare(dateA);
   });
   items.forEach((item) => list.appendChild(item));
 
