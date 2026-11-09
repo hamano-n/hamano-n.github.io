@@ -91,7 +91,13 @@ a:focus-visible, .timeline-list:focus-visible {
 .menu-section h2 {
   margin: 0 0 8px;
   padding: 2px 5px;
-  background: #373a3f;
+  background: linear-gradient(
+    to right,
+    #373a3f 0%,
+    #373a3f 65%,
+    rgba(55, 58, 63, 0.5) 85%,
+    transparent 100%
+  );
   color: #e0e1e3;
   font-size: 0.9rem;
   font-weight: 700;
