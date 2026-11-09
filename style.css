@@ -260,6 +260,41 @@ h1 { margin: 0 0 10px; font-size: clamp(1.35rem, 2.4vw, 1.8rem); font-weight: 70
   color: var(--text);
 }
 
+/* レトロな立体感・ハードシャドウ */
+
+/* サイト全体の外枠 */
+.site-shell {
+  border-top: 1px solid #777b82;
+  border-left: 1px solid #777b82;
+  border-right: 2px solid #090a0c;
+  border-bottom: 2px solid #090a0c;
+  box-shadow: 2px 2px 0 #08090a;
+}
+
+/* サイドバーとメイン領域の境界 */
+.sidebar {
+  box-shadow: inset -1px 0 0 #090a0c;
+}
+
+/* 見出し：少し浮き上がった感じ */
+.menu-section h2 {
+  border-top: 1px solid #62666d;
+  border-left: 1px solid #62666d;
+  border-right: 1px solid #111214;
+  border-bottom: 1px solid #111214;
+  box-shadow: 1px 1px 0 #08090a;
+}
+
+/* 活動履歴：内側に沈んだ表示領域 */
+.timeline-list,
+.timeline-frame {
+  border-top: 1px solid #0b0c0e;
+  border-left: 1px solid #0b0c0e;
+  border-right: 1px solid #666b73;
+  border-bottom: 1px solid #666b73;
+  box-shadow: inset 1px 1px 0 #101114;
+}
+
 /* これらのルールは、timeline.html 内のみに適用され、親ページには適用されない */
 body.timeline-document {
   min-height: 100%;
